@@ -31,7 +31,7 @@ const PORT = process.env.PORT || 5000;
 
 
 app.use(cors({
-    origin: '*', // allow all origins
+    origin: 'https://stunning-custard-905e21.netlify.app/', // allow all origins
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
     allowedHeaders: ['Content-Type', 'Authorization'],
   }));
