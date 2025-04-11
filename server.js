@@ -30,11 +30,15 @@ const PORT = process.env.PORT || 5000;
 
 
 
-app.use(cors({
-    origin: 'https://stunning-custard-905e21.netlify.app/', // allow all origins
+const corsOptions = {
+    origin: 'https://stunning-custard-905e21.netlify.app', // ✅ no trailing slash!
+    credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
     allowedHeaders: ['Content-Type', 'Authorization'],
-  }));
+  };
+  
+  app.use(cors(corsOptions));
+  
   
 
 app.use(cookieParser());
